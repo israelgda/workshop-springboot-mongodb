@@ -38,7 +38,14 @@ public class ServiceUsuario {
 		return repository.insert(usuario);
 	}
 	
+	public void delete(String id) {
+		findById(id);
+		repository.deleteById(id);
+	}
+	
 	public Usuario fromDTO(UsuarioDTO UsuarioDTO) {
 		return new Usuario(UsuarioDTO.getId(), UsuarioDTO.getNome(), UsuarioDTO.getEmail());
 	}
+	
+	
 }
