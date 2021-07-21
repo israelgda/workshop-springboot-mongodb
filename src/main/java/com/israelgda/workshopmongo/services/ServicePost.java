@@ -34,7 +34,7 @@ public class ServicePost {
 	}	
 	
 	public List<Post> findByTitulo(String texto){
-		return repository.findByTituloContainingIgnoreCase(texto);
+		return repository.findByTitulo(texto);
 	}
 	
 }
